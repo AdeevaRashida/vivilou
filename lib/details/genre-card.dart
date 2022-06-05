@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+
+import '../const.dart';
+
+class GenreCard extends StatelessWidget {
+  final String genre;
+
+  const GenreCard({ Key? key, required this.genre}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      margin: const EdgeInsets.only(left: kDefaultPadding),
+      padding: const EdgeInsets.symmetric(
+        horizontal: kDefaultPadding,
+        vertical: kDefaultPadding / 4,
+      ),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white24),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Text(
+        genre,
+        style: TextStyle(color: kTextColor.withOpacity(0.8), fontSize: 16),
+      ),
+    );
+  }
+}
